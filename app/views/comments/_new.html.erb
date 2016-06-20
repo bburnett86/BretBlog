@@ -1,0 +1,11 @@
+<%= form_tag( blog_comments_path, id: "commentForm") do %>
+  <div class = "showMargin">
+    <p class = "header">
+      New Comment:
+    </p>
+      <%= text_area_tag('content', "", class: 'textAreaForm') %>
+    <div class = "center">
+      <%= submit_tag "Submit Comment",  :class=>"button", :id=> "newArticleButton" %>
+    </div>
+  </div>
+<% end %>

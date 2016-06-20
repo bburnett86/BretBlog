@@ -1,0 +1,13 @@
+<h5 class = "center">
+  <%= comment.content %>
+</h5>
+<li class = "center">
+  Username: <%= comment.commenter.username %>
+</li>
+<% if logged_in? && comment.commenter == current_user %>
+  <%= form_tag("/blogs/#{params[:blog_id]}/comments/#{params[:id]}", method: "delete") do %>
+    <div class = "center">
+      <%= submit_tag "Delete Comment",  :class=>"button" %>
+    </div>
+  <% end %>
+<% end %>

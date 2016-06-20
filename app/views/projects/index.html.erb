@@ -1,0 +1,14 @@
+<div class = "container">
+  <div class = "jumbotron showPage">
+    <div class = "header" id = "showMargin">
+      Projects
+    </div>
+    <div class = "index center">
+      <% @articles.each do |article| %>
+        <h5>
+          <%= link_to article.title, project_path(article), :id=> "#{article.id}", :class=>"project_links" %>
+        </h5>
+      <% end %>
+    </div>
+  </div>
+</div>

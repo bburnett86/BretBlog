@@ -1,0 +1,56 @@
+<div class = "container">
+  <div class = "jumbotron center showPage">
+    <div class = "header row">
+      Welcome to the archive, <%= current_user.username %>!
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class = "header archiveHeader">
+          About Me
+        </div>
+        <p class ="header center"><%= link_to @about_me.title, article_path(@about_me) %></p>
+        <div>
+          <%= link_to "Edit About Me", edit_article_path(@about_me) %>
+        </div>
+        <div>
+          <%= link_to "Delete About Me", delete_article_path(@about_me) %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class = "header archiveHeader">
+          Blogs
+        </div>
+        <div class = "showMargin">
+          <% @blogs.each do |blog| %>
+            <p class ="header center"><%= link_to blog.title, article_path(blog) %></p>
+            <div>
+              <%= link_to "Edit Post", edit_article_path(blog) %>
+            </div>
+            <div>
+              <%= link_to "Delete Post", delete_article_path(blog) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class = "header archiveHeader">
+          Projects
+        </div>
+        <div class = "showMargin">
+          <% @projects.each do |project| %>
+            <p class ="header center"><%= link_to project.title, article_path(project) %></p>
+            <div>
+              <%= link_to "Edit Project", edit_article_path(project) %>
+            </div>
+            <div>
+              <%= link_to "Delete Project", delete_article_path(project) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div id ="newArticleLink" class = "row">
+      <h3><%= link_to "Create New Article", new_article_path %></h3>
+    </div>
+  </div>
+</div>

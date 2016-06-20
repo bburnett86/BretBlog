@@ -1,0 +1,181 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html{
+  height: 100%;
+}
+#leftLayout{
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+#rightLayout{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+body {
+  background: #AFBBA8;
+  background: -webkit-linear-gradient(left top, #AFBBA8, #BBAEA8);
+  background: -o-linear-gradient(bottom right, #AFBBA8, #BBAEA8);
+  background: -moz-linear-gradient(bottom right, #AFBBA8, #BBAEA8);
+  background: linear-gradient(to bottom right, #AFBBA8, #BBAEA8);
+  background-repeat: no-repeat;
+  height: 100%;
+  }
+
+
+.header{
+  color: #886152;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+}
+
+#mainImg{
+  height: 75%;
+  width: 25%;
+  border-radius: 5px;
+}
+
+#showImg{
+  height: 150px;
+  border-radius: 5px;
+}
+
+.autoMargin{
+  margin: auto;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:link {
+    color: #AFBBA8;
+}
+
+a:visited {
+    color: #AFBBA8;
+}
+
+.layoutLink{
+  border-radius: 5px;
+  padding: 2px;
+  background: #EEEEEE;
+  color: #886152;
+}
+
+/* Ask Monday how to make sure these colors transfer over.
+a:hover {
+    color: #B4F0B4;
+}
+
+a:focus {
+    color: #AFBBA8;
+}
+*/
+
+#mainOptions{
+  margin-top: 10px;
+}
+
+.button{
+  border-radius: 5px;
+  background: #AFBBA8;
+  background: -webkit-linear-gradient(left top, #BBAEA8, #AFBBA8);
+  background: -o-linear-gradient(bottom right, #BBAEA8, #AFBBA8);
+  background: -moz-linear-gradient(bottom right, #BBAEA8, #AFBBA8);
+  background: linear-gradient(to bottom right, #BBAEA8, #AFBBA8);
+  color: #EEEEEE;
+}
+
+.form{
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.jumbotron{
+  margin-top: 40px;
+}
+
+.center{
+  text-align: center;
+}
+
+.error{
+  color: red;
+  font-weight: bold;
+}
+
+.textAreaForm{
+  border-radius: 5px;
+  margin-bottom: 15px;
+  height: 35%;
+  width: 70%;
+  overflow: scroll;
+  border-color: #AFBBA8;
+  color: #BBAEA8;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.radioButtons{
+  color: #BBAEA8;
+  font-weight: normal;
+
+}
+
+.picURLfield{
+  width: 70%;
+  border-radius: 5px;
+  border-color: #AFBBA8;
+  color: #BBAEA8;
+}
+
+#showMargin{
+  margin-bottom: 20px;
+}
+
+.alignRight{
+  text-align: right;
+}
+
+#aboutImg{
+  border-radius: 100%;
+  height: 200px;
+}
+
+.showPage{
+  height: 650px;
+  overflow: scroll;
+}
+#centerLayout{
+  text-align: center;
+  margin-top: 5px;
+}
+
+body{
+  color: #886152;
+}
+
+p{
+  color: #886152;
+}

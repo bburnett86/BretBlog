@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class = 'layout row'>
+    <%= link_to 'Home', root_path, class: 'layoutLink', id: "leftLayout" %>
+    <p id = "centerLayout"><%= link_to "About Me", about_me_path, class: "layoutLink" %> | <%= link_to "Blogs", blogs_path, class: "layoutLink" %> | <%= link_to "Projects", projects_path, class: "layoutLink" %>
+    </p>
+    <% if logged_in? %>
+      <%= link_to 'Logout', logout_path, class: 'layoutLink', id: "rightLayout" %>
+    <% else %>
+      <p id= 'rightLayout'><%= link_to 'Login', new_session_path, class: 'layoutLink'  %> | <%= link_to 'Register', new_user_path, class: 'layoutLink'  %></p>
+    <% end %>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>

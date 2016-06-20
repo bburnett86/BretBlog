@@ -1,0 +1,17 @@
+<div class = "container">
+  <div class = "jumbotron">
+    <%= form_tag('/session') do %>
+      <div id = "registerForm">
+      <%= label_tag('Username:') %>   <%= text_field_tag('username', "", class: 'form') %>
+      <%= label_tag('Password:') %>   <%= password_field_tag 'password', "", class: 'form' %></div>
+      <% if @errors %>
+        <div class = "center error">
+          <% @errors.each do |error| %>
+            <%= error %>
+          <% end %>
+        </div>
+      <% end %>
+      <div class = "center"><%= submit_tag "Register",  :class=>"button" %></div>
+    <% end %>
+  </div>
+</div>

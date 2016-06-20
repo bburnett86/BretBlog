@@ -1,0 +1,29 @@
+<div class = "container">
+  <div class = "jumbotron showPage">
+    <div class = "blog_pic center row" id = "showMargin">
+      <%= image_tag(@article.pic_url, :id => "showImg") %>
+    </div>
+    <div class = "row">
+      <div class = "header center row">
+        <%= @article.title %>
+      </div>
+      <div class = "content center row">
+        <p id="content"><%= @article.content %></p>
+      </div>
+      <div class = "col-md-6 alignRight" id = "showMargin">
+        <% if (Article.where(project: true).sort.first != Article.find(params[:id])) %>
+          <%= link_to "Previous Project", project_path(@previous_article), :id=> "#{@previous_article.id}", :class=>"show_project_link" %>
+        <% else %>
+          <%= link_to "Last Project", project_path(@last_article), :id=> "#{@last_article.id}", :class=>"show_project_link" %>
+        <% end %>
+      </div>
+      <div class = "col-md-6">
+        <% if (Article.where(project: true).sort.last != Article.find(params[:id])) %>
+          <%= link_to "Next Project", project_path(@next_article), :id=> "#{@next_article.id}", :class=>"show_project_link" %>
+        <% else %>
+          <%= link_to "First Project", project_path(@first_article), :id=> "#{@first_article.id}", :class=>"show_project_link" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
