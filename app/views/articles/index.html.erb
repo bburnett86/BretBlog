@@ -8,7 +8,7 @@
         <div class = "header archiveHeader">
           About Me
         </div>
-        <p class ="header center"><%= link_to @about_me.title, article_path(@about_me) %></p>
+        <p class ="header center"><%= link_to @about_me.title, about_me_path %></p>
         <div>
           <%= link_to "Edit About Me", edit_article_path(@about_me) %>
         </div>
@@ -22,7 +22,7 @@
         </div>
         <div class = "showMargin">
           <% @blogs.each do |blog| %>
-            <p class ="header center"><%= link_to blog.title, article_path(blog) %></p>
+            <p class ="header center"><%= link_to blog.title, blog_path(blog) %></p>
             <div>
               <%= link_to "Edit Post", edit_article_path(blog) %>
             </div>
@@ -38,7 +38,7 @@
         </div>
         <div class = "showMargin">
           <% @projects.each do |project| %>
-            <p class ="header center"><%= link_to project.title, article_path(project) %></p>
+            <p class ="header center"><%= link_to project.title, project_path(project) %></p>
             <div>
               <%= link_to "Edit Project", edit_article_path(project) %>
             </div>
