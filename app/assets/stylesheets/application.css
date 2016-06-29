@@ -118,6 +118,10 @@ a:focus {
   text-align: center;
 }
 
+.left{
+  text-align: left;
+}
+
 .error{
   color: red;
   font-weight: bold;
