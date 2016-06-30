@@ -5,9 +5,9 @@
     </div>
     <div class = "index center" id= "showMargin">
       <% @articles.each do |article| %>
-        <h5>
+        <h3>
           <%= link_to article.title, blog_path(article), :id=> "#{article.id}", :class=>"blog_links" %>
-        </h5>
+        </h3>
       <% end %>
     </div>
   </div>
