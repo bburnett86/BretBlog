@@ -81,15 +81,11 @@ a:visited {
   color: #886152;
 }
 
-/* Ask Monday how to make sure these colors transfer over.
-a:hover {
-    color: #B4F0B4;
+#content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
-
-a:focus {
-    color: #AFBBA8;
-}
-*/
 
 #mainOptions{
   margin-top: 10px;
