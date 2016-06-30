@@ -11,9 +11,17 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @blogs = Article.where(blog_post: true).reverse_order
-    @about_me = Article.find_by(about_me: true).reverse_order
-    @projects =Article.where(project: true).reverse_order
+    @about_me = Article.find_by(about_me: true)
+
+    @blogs = Article.where(blog_post: true)
+    if @blogs.count > 1
+      @blogs = @blogs.reverse_order
+    end
+
+    @projects =Article.where(project: true)
+    if Article.where(project: true).count > 1
+      @projects = @projects.reverse_order
+    end
     render :index
   end
 

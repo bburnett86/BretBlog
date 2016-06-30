@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   include SessionHelper
 
   def index
-    @articles = Article.where(project: true)
+    @articles = Article.where(project: true).reverse_order
     render :index
   end
 
