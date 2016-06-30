@@ -2,8 +2,10 @@
   <div class = "jumbotron center">
     <%= form_tag("/articles/#{@article.id}", method: "put") do %>
       <div>
-      <p class = "header">Edit Title</p>   <%= text_field_tag('title', @article.title, class: 'textAreaForm') %>
-      <p class = "header">Edit Content</p>   <%= text_area_tag 'content', @article.content, class: 'textAreaForm' %></div>
+        <p class = "header">Edit Title</p><%= text_field_tag('title', @article.title, class: 'textAreaForm') %>
+        <p class = "header">Edit Picture</p><%= text_field_tag 'pic_url', @article.pic_url, class: 'textAreaForm' %>
+        <p class = "header">Edit Content</p><%= text_area_tag 'content', @article.content, class: 'textAreaForm' %>
+      </div>
       <% if @errors %>
         <div class = "center error">
           <% @errors.each do |error| %>

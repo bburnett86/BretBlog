@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
 
   def update
     article = Article.find(params[:id])
-    article.assign_attributes(title: params[:title], content: params[:content])
+    article.assign_attributes(title: params[:title], content: params[:content], pic_url: params[:pic_url])
     if article.save
       redirect_to articles_path
     else

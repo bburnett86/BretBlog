@@ -8,7 +8,7 @@
         <%= @article.title %>
       </div>
       <div class = "row">
-        <p><%= simple_format(@article.content) %></p>
+        <div id = "content"><%= simple_format(@article.content) %></div>
       </div>
       <div class = "col-md-6 alignRight" id = "showMargin">
         <% if (Article.where(blog_post: true).sort.first != Article.find(params[:id])) %>
