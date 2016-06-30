@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   include ArticlesHelper
 
   def index
-    @articles = Article.where(blog_post: true)
+    @articles = Article.where(blog_post: true).reverse_order
     render :index
   end
 
