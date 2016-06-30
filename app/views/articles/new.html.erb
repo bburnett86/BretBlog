@@ -4,10 +4,10 @@
       <div>
       <p class = "header">Article Title:</p>
         <%= text_field_tag('title',"", class: 'textAreaForm') %>
-      <p class = "header">Article Content:</p>
-        <%= text_area_tag('content', "", class: 'textAreaForm') %>
       <p class = "header">Picure URL:</p>
         <%= text_field_tag('pic_url',"", class: 'picURLfield') %>
+      <p class = "header">Article Content:</p>
+        <%= text_area_tag('content', "", class: 'textAreaForm') %>
       <p class = "header">Article Type:</p>
       <div class="col-md-4">
         <%= label_tag 'Article', 'Create Blog Post', class: "radioButtons" %>    <%= radio_button_tag 'blog_post', true %>
